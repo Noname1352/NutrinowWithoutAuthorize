@@ -17,6 +17,17 @@
         <form @submit.prevent="this.part += 1">
             <p><b>Сколько вам лет?</b></p>
             <input type="text" v-model="ages" required>
+            <p><b>Какого вы пола?</b></p>
+            <div class="radiobuttons">
+                <label>
+                    <input type="radio" name="gender" class="radiobutton" value="Man" v-model="this.gender">
+                    <div class="g">Мужчина</div>
+                </label>
+                <label>
+                    <input type="radio" name="gender" class="radiobutton" value="Woman" v-model="this.gender">
+                    <div class="g">Женщина</div>
+                </label>
+            </div>
             <input type="submit" value="Отправить" class="submit">
         </form>
     </div>
@@ -199,6 +210,7 @@ export default {
     data() {
         return {
             islogin: true,
+            gender: "Man",
             caloriesRequired: localStorage.data,
             part: 1,
             act: 1.2,
@@ -252,7 +264,7 @@ export default {
         },
         needcalories(meal) {
             let ans = 10 * this.weight + 6.25 * this.height - 5 * this.ages
-            if (localStorage.data.gender == 'Man') {
+            if (this.gender == 'Man') {
                 ans += 5
             }
             else {
@@ -393,5 +405,20 @@ input[type="number"] {
 
 .item {
     text-align: left
+}
+
+.radiobutton {
+    width: 100%;
+}
+
+.radiobuttons {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin: auto;
+}
+
+.g {
+    padding: 10px;
 }
 </style>
