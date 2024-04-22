@@ -1,14 +1,12 @@
 <template>
     <div class="header">
         <img src="../assets/logo.svg">
-            <p>Составь свой рацион питания на день за пару минут!</p>
-        <Main/>
+        <p>Составь свой рацион питания на день за пару минут!</p>
     </div>
 </template>
 <script>
-import Main from "./Main.vue"
 export default {
-    components: [Main],
+    
 }
 </script>
 <style scoped>

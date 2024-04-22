@@ -4,17 +4,19 @@
             <Header/>
         </div>
         <div class="main">
-            <router-view></router-view>
+            <Main/>
         </div>
     </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
+import Main from './components/Main.vue'
 
 export default {
     components: {
-        Header
+        Header,
+        Main
     },
 }
 </script>
