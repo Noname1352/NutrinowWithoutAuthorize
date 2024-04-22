@@ -198,7 +198,7 @@ import ShowValue from './ShowValue.vue'
 export default {
     data() {
         return {
-            islogin: false,
+            islogin: true,
             caloriesRequired: localStorage.data,
             part: 1,
             act: 1.2,

@@ -2,36 +2,13 @@
     <div class="header">
         <img src="../assets/logo.svg">
             <p>Составь свой рацион питания на день за пару минут!</p>
-        <!-- <div class="nav">
-            <router-link :to="{ name: 'main' }" class="link">Главная страница</router-link>
-            <router-link :to="{ name: 'login' }" class="link" v-if="!this.islogin">Вход в аккаунт</router-link>
-            <router-link :to="{ name: 'register' }" class="link" v-if="!this.islogin">Регистрация</router-link>
-            <a class="link" v-if="this.islogin" @click="Unauth" href="/">Выйти из аккаунта</a>
-        </div> -->
         <Main/>
     </div>
 </template>
 <script>
 import Main from "./Main.vue"
 export default {
-    data() {
-        return {
-            islogin: false
-        }
-    },
     components: [Main],
-    methods: {
-        Unauth() {
-            this.islogin = false
-            const l = localStorage.lastuser
-            localStorage.clear()
-        }
-    },
-    mounted() {
-        if (localStorage.data) {
-            this.islogin = true
-        }
-    }
 }
 </script>
 <style scoped>
