@@ -307,17 +307,7 @@ export default {
     components: {
         Choice,
         ShowValue
-    },
-    mounted() {
-        if (localStorage.data){
-            this.islogin = true
-        }
-    },
-    watch: {
-        islogin(newislogin) {
-            localStorage.islogin = newislogin
-        }
-    },
+    }
 }
 </script>
 <style scoped>

@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import axios from 'axios';
 import AfterLogin from './AfterLogin.vue'
 
 export default {

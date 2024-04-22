@@ -8,7 +8,6 @@
             <router-link :to="{ name: 'register' }" class="link" v-if="!this.islogin">Регистрация</router-link>
             <a class="link" v-if="this.islogin" @click="Unauth" href="/">Выйти из аккаунта</a>
         </div> -->
-        f
         <Main/>
     </div>
 </template>
@@ -26,7 +25,6 @@ export default {
             this.islogin = false
             const l = localStorage.lastuser
             localStorage.clear()
-            localStorage.lastuser = l
         }
     },
     mounted() {
